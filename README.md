@@ -46,6 +46,7 @@ cap unicorn:reload
 - ```unicorn_env``` - Set unicorn environment. Default to ```rails_env``` variable.
 - ```unicorn_pid``` - Set unicorn PID file path. Default to ```current_path/tmp/pids/unicorn.pid```
 - ```unicorn_bin``` - Set unicorn executable file. Default to ```unicorn```.
+- ```primary_config_path``` - Set unicorn config file. Default to ```"#{current_path}/config/unicorn.rb"```.
 
 ## License
 
