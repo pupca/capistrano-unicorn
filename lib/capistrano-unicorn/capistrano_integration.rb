@@ -47,6 +47,7 @@ module CapistranoUnicorn
           _cset(:app_env) { (fetch(:rails_env) rescue 'production') }
           _cset(:unicorn_env) { fetch(:app_env) }
           _cset(:unicorn_bin, "unicorn")
+          _cset(:primary_config_path, "#{current_path}/config/unicorn.rb")
         end
 
         #
@@ -64,7 +65,6 @@ module CapistranoUnicorn
               end
             end
 
-            primary_config_path = "#{current_path}/config/unicorn.rb"
             if remote_file_exists?(primary_config_path)
               config_path = primary_config_path
             else
