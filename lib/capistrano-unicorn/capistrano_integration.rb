@@ -47,7 +47,7 @@ module CapistranoUnicorn
           _cset(:app_env) { (fetch(:rails_env) rescue 'production') }
           _cset(:unicorn_env) { fetch(:app_env) }
           _cset(:unicorn_bin, "unicorn")
-          _cset(:unicorn_config_path, "#{current_path}/config/unicorn.rb"
+          _cset(:unicorn_config_path, "#{current_path}/config/unicorn.rb")
         end
 
         #
